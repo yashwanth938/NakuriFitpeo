@@ -1,0 +1,450 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #e8ebf2;
+  color: #8c8caa;
+  font-family: "Montserrat", sans-serif;
+}
+
+.icon {
+  vertical-align: middle;
+  line-height: 1px;
+  font-size: 20px;
+}
+.icon_header {
+  vertical-align: middle;
+  line-height: 1px;
+  font-size: 26px;
+}
+.icon,
+.icon_header {
+  margin-right: 10px;
+}
+
+.close_icon {
+  color: red;
+  margin-left: 30px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 260px 1fr 1fr 1fr;
+  grid-template-rows: 0.2fr 3fr;
+  grid-template-areas:
+    "sidebar header header header"
+    "sidebar main main main";
+  height: 100vh;
+}
+
+/* Search bar styling */
+
+.input-wrapper {
+  background-color: white;
+  width: 80%;
+  border-radius: 15px;
+  height: 2.5rem;
+  padding: 0px 0px 9px #dfd2d2;
+  display: flex;
+  align-items: center;
+}
+
+input {
+  background-color: transparent;
+  border: none;
+  height: 100%;
+  font-size: 1.25rem;
+  width: 100%;
+  margin-left: 1px;
+}
+
+input:focus {
+  outline: none;
+}
+
+#search-icon {
+  color: #1d2634;
+  width: 20%;
+}
+
+/* end of styling */
+
+/* Header  */
+.header {
+  grid-area: header;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30px 0 30px;
+  /* box-shadow: 0 6px 7px -3px rgba(0, 0, 0, 0.35); */
+}
+
+.colorchg {
+  color: #110c28;
+}
+
+.header-right {
+  display: flex;
+  align-items: right;
+}
+
+.menu-icon {
+  display: none;
+}
+/* End Header  */
+
+/* Sidebar  */
+#sidebar {
+  grid-area: sidebar;
+  height: 100%;
+  background-color: #110c28;
+  overflow-y: auto;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+}
+
+.sidebar-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px 0px 30px;
+  margin-bottom: 30px;
+}
+
+.sidebar-title > span {
+  display: none;
+}
+
+.sidebar-brand {
+  margin-top: 10px;
+
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.sidebar-list {
+  padding: 0;
+  list-style-type: none;
+}
+
+.sidebar-list-item {
+  padding: 20px 20px 20px 20px;
+  font-size: 18px;
+}
+
+/* .sidebar-list-item:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+} */
+.sidebar-list-item:hover {
+  color: rgba(255, 255, 255, 1);
+  box-shadow: 0 5px 15px rgba(155, 56, 147, 0.4);
+}
+
+.sidebar-list-item > a {
+  text-decoration: none;
+  color: #9e9ea4;
+}
+
+.sidebar-responsive {
+  display: inline !important;
+  position: absolute;
+  /*
+      we want the z-index of the sidebar higher so that
+      the charts are not showing over the sidebar 
+      on small screens
+    */
+  z-index: 12 !important;
+}
+
+/* End Sidebar  */
+
+/* Main  */
+.main-container {
+  grid-area: main;
+  overflow-y: auto;
+  padding: 20px 20px;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.main-title {
+  display: flex;
+  justify-content: space-between;
+}
+
+.main-cards {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 20px;
+  margin: 15px 0;
+}
+
+.monthbar2 {
+  /* padding: 0px 600px 0.5% 0%; */
+  width: 21%;
+  height: 5%;
+  font-weight: 300;
+  font-size: large;
+  color: #110c28;
+}
+
+.monthbar1 {
+  /* padding: 0px 9px 0px 9%; */
+  width: 20%;
+  height: 5%;
+  color: #1d2634;
+}
+
+.month-1 {
+  padding: 5px 9% 0px 30px;
+  height: 5%;
+  color: #1d2634;
+}
+
+.month-2 {
+  padding: 0px 9% 1% 30px;
+  height: -1%;
+
+  width: -1%;
+  margin-top: -9%;
+  color: #1d2634;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 8px 15px;
+  border-radius: 10px;
+}
+.card-1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 15px 50px;
+  border-radius: 20px;
+  background-color: #c9b0b0;
+}
+
+.card-2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 8px 15px;
+  border-radius: 10px;
+}
+
+.card-2:nth-child(2) {
+  background-color: #ffffff;
+}
+
+.card-1:first-child {
+  background-color: #ffffff;
+}
+.card-1:nth-child(2) {
+  background-color: #ffffff;
+}
+
+.card:first-child {
+  background-color: #fdfdfd;
+}
+
+.card:nth-child(2) {
+  background-color: #ffffff;
+}
+
+.card:nth-child(3) {
+  background-color: #ffffff;
+}
+
+.card:nth-child(4) {
+  background-color: #ffffff;
+}
+
+.card-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 1px;
+  padding: 1px 3px;
+  border-radius: 10px;
+}
+
+.icon_color1 {
+  color: #2cbb27;
+}
+.icon_color2 {
+  color: #b52bcec9;
+}
+.icon_color3 {
+  color: #372199c8;
+}
+.icon_color4 {
+  color: #921b2a;
+}
+
+.earning1-1pro {
+  /* color: #110c28; */
+  /* float: left;
+  color: #110c28;
+  font-weight: bold;
+  font-size: small;*/
+  /* Add spacing between text and value */
+  bottom: 10%;
+  padding-top: 9px;
+}
+
+.icon-container1 {
+  width: 100px; /* Set the width for the icon container */
+  height: 100px; /* Set the height for the icon container */
+  background-color: #8767d373; /* Set the background color for the container */
+  border-radius: 50%; /* Make the container a circle */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 5px; /* Add margin to the container */
+}
+
+.icon-container2 {
+  width: 100px; /* Set the width for the icon container */
+  height: 100px; /* Set the height for the icon container */
+  background-color: #8680d4ad; /* Set the background color for the container */
+  border-radius: 50%; /* Make the container a circle */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 5px; /* Add margin to the container */
+}
+
+.icon-container3 {
+  width: 100px; /* Set the width for the icon container */
+  height: 100px; /* Set the height for the icon container */
+  background-color: #ac226e89;
+  /* Set the background color for the container */
+  border-radius: 50%; /* Make the container a circle */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 5px; /* Add margin to the container */
+}
+
+.icon-container {
+  width: 100px; /* Set the width for the icon container */
+  height: 100px; /* Set the height for the icon container */
+  background-color: #80d4ab99; /* Set the background color for the container */
+  border-radius: 50%; /* Make the container a circle */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 5px; /* Add margin to the container */
+}
+
+.large-icon {
+  font-size: 50px; /* Set the desired icon size */
+
+  border-radius: 0%; /* Make it a circle by setting border-radius to 50% */
+  width: 100px; /* Set the desired width (same as height for a circle) */
+  height: 50px; /* Set the desired height (same as width for a circle) */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5px;
+
+  margin-bottom: 5px; /* Add margin to the top of the icon */
+  margin-right: 3px; /* Add margin to the right of the icon */
+}
+
+.earning-text {
+  float: left;
+  color: #110c28;
+  font-weight: 300;
+  font-size: large;
+
+  margin-inline-start: 5%;
+  margin-right: 10px; /* Add spacing between symbol and text */
+  margin-top: 20px; /* Add margin to the top of the text */
+}
+
+.earning1-1 {
+  float: left;
+  color: #110c28;
+  font-weight: bold;
+  font-size: small;
+  margin-left: 5px; /* Add spacing between text and value */
+  margin-top: -15px;
+  padding-bottom: 9px 9px; /* Add margin to the top of the value */
+}
+
+.earning1 {
+  float: left;
+  color: #110c28;
+  font-weight: bold;
+  margin-left: 5px; /* Add spacing between text and value */
+  margin-top: -15px;
+  padding-bottom: 0px 9px; /* Add margin to the top of the value */
+}
+
+.card-inner.card_icon {
+  font-size: 100px;
+
+  float: left;
+}
+
+.charts {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 20px;
+  margin-top: 60px;
+  height: 300px;
+}
+
+/* End Main  */
+
+/* Medium <= 992px */
+
+@media screen and (max-width: 992px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.2fr 3fr;
+    grid-template-areas:
+      "header"
+      "main";
+  }
+
+  #sidebar {
+    display: none;
+  }
+
+  .menu-icon {
+    display: inline;
+  }
+
+  .sidebar-title > span {
+    display: inline;
+  }
+}
+/* Small <= 768px */
+
+@media screen and (max-width: 768px) {
+  .main-cards {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin-bottom: 0;
+  }
+
+  .charts {
+    grid-template-columns: 1fr;
+    margin-top: 30px;
+  }
+}
+
+/* Extra Small <= 576px */
+
+@media screen and (max-width: 576px) {
+  .hedaer-left {
+    display: none;
+  }
+}
