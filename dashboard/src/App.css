@@ -435,8 +435,12 @@ input:focus {
     margin-bottom: 0;
   }
 
+  .card-2 {
+    padding: 6%;
+  }
+
   .charts {
-    grid-template-columns: 1fr;
+    grid-template-columns: 2fr;
     margin-top: 30px;
   }
 }
